@@ -10,24 +10,26 @@ const Subscribe = () => {
     const purchaseData = [{id:100000,userid,purchaseType:"구독",period:"30",price:"10000"}];
     function subscribe()
     {
+
         fetch(`/api/purchase`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({purchaseData})
+            body: JSON.stringify(purchaseData)
         })
         .catch(error=>console.log(error))
+
         navigate('/purchase');
     }
 return (
 <div class="container">
 
         <div class="logo">
-            <img src=".png" alt="Subscribe"></img>
+            <h1>SUbSCRIBE</h1>
         </div>
 
 
         <div class="main-text">
-            <h1>Bookweb의 모든 것을 자유롭게 사용해보세요.</h1>
+            <h1>Book & Y의 모든 것을 자유롭게 사용해보세요.</h1>
             <p>오프라인 다운로드, 대여, 소장을 자유롭게 사용 보장</p>
             <p>월 10000원, 언제든지 취소 가능</p>
         </div>

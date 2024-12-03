@@ -1,0 +1,88 @@
+.group-title{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+#back{
+    background-color: gray;
+    opacity: 0.5;
+    border-radius: 5px;
+    padding: 2px 2px 3px 3px;
+    font-size: 20px;
+}
+.action-bar{
+    display: flex;
+    gap:10px;
+    margin-right: 2rem;
+    cursor: pointer;
+    justify-content: center;
+}
+.action-bar span{
+    border: 5px solid white;
+    background-color: white;
+    border-radius: 5px;
+}
+.group-summary{
+    display: flex;
+    border-radius: 5px;
+    border:1px solid black;
+    padding: 10px;
+    justify-content: space-evenly;
+    background-color: white;
+}
+.column{
+    display:flex;
+    flex-direction: column;
+}
+.summary{
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+}
+.group-info .plans{
+    display: flex;
+    justify-content: space-between;
+    margin:10px;
+    align-items: flex-end;
+    gap: 10px;
+    cursor: pointer;
+}
+.group-info .tab.active .plan_name{
+    color: rgb(238 174 119);
+    position: relative;
+}
+.group-info .tab.active .plan_name::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: rgb(238 174 119); /* 선의 색상 */
+    width: 100%;
+    position: absolute;
+    bottom: -12px; /* 글자 아래 간격 */
+    left: 0;
+}
+.group-info .plans .plan{
+    position: relative;
+    display: flex;
+}
+.plan-input{
+    display: flex;
+    flex-direction: row;
+    border:none;
+    margin-right: 30px;
+    gap:10px;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding:0;
+}
+.plan-input input{
+    width:300px;
+    padding:0;
+    margin:0;
+}
+#plan-create {
+    border: 5px solid white;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

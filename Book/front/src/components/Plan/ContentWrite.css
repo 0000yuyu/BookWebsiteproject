@@ -1,0 +1,32 @@
+.write-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content-data{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border:1px solid black;
+    max-width: 200px;
+    background-color: white;
+    margin-bottom: 30px;
+}
+.content-write{
+    border:1px solid black;
+    padding: 20px;
+    resize: vertical;
+    margin-bottom: 30px;
+}
+.content-write textarea{
+    width:500px;
+    height: 500px;
+}
+.write-body{
+    display: flex;
+}
+.write-container .action-bar{
+    display: flex;
+    margin: 10px;
+    gap: 30px;
+}

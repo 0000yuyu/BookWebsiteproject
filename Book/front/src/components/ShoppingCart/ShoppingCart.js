@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 import {totalPrice} from '../Data/function';
 import {UserContext} from '../../UserContext'
 import './ShoppingCart.css';
-
+import BookData from '../Data/book.json'
 const ShoppingCart = () => {
     const [CartData,setCartData] = useState([]);
     const [SelectItem,setSelectItem] = useState([]);
@@ -16,7 +16,6 @@ const ShoppingCart = () => {
     useEffect(() => {
         const fetchCartData = async () => {
             try {
-                console.log("가져옴!");
                 const response = await fetch(`/api/user/cart/items/${userid}`, {
                     method: 'GET',
                 });
@@ -49,11 +48,11 @@ const ShoppingCart = () => {
     }
     function AllPurchase()
     {
-        onSubmitPurchase(CartData);
+        onSubmitPurchase(CartData)
     }
     function CheckedPurchase()
     {
-        onSubmitPurchase(SelectItem);
+        onSubmitPurchase(SelectItem)
     }
     function handleChecked(book,index)
     {
@@ -84,14 +83,13 @@ const ShoppingCart = () => {
         .catch(error=>console.log(error))
 
      }
-     function CheckedDelete()
+     function AllDelete()
      {
         for (let index=0;index< CartData.length;index++)
-            if (CheckedState[index])
-                itemDelete(CartData[index]);
+            itemDelete(CartData[index]);
         window.location.reload();
      }
-     function AllDelete()
+     function CheckedDelete()
      {
         for(const item of SelectItem)
             itemDelete(item);
@@ -109,9 +107,9 @@ return (
                     onChange={()=>handleChecked(book,index)}
                     ></input>
                     <div class="cart-item-info">
-                        <h3>{book.title}</h3>
+                        <h3>{BookData[book.id-1].title}</h3>
                         <p>{book.price}</p>
-                        <p>{book.period}</p>
+                        <p>{book.period}일</p>
                         <p>구매 분류: <strong>{book.purchaseType}</strong></p>
                     </div>
                 </div>
@@ -136,7 +134,7 @@ return (
                 {
                     SelectItem.map((item,index)=>(
                         <tr class="selectedItem">
-                            <td>{item.title}</td>
+                            <td>{item.id!=null?BookData[item.id-1].title:"비어 있음"}</td>
                             <td>{item.purchaseType}</td>
                             <td>{item.period}</td>
                             <td>{item.price}</td>

@@ -1,0 +1,162 @@
+:root {
+    --bg-color: #fff;
+    --text-color: #000;
+    --font-size: 16px;
+    --line-height: 32px;
+}
+
+.container {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.text-viewer {
+    margin: 0 auto;
+    width: 90%;
+    height: 90%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow:hidden;
+}
+.container button:hover{
+
+}
+
+.page-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.page-column {
+    flex: 1;
+    padding: 20px;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    text-align: justify;
+}
+
+.divider {
+    width: 2px;
+    background-color: #ddd;
+}
+
+.pagination {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.pagination button {
+    margin: 0 10px;
+}
+
+.menu-button {
+    padding: 15px 25px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.view-action-bar{
+    color:black;
+    position: fixed;
+    bottom:20px;
+    right:0;
+    gap:10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+.select-menu{
+    display: flex;
+    flex-direction: column;
+}
+.select-menu button{
+    width:100%
+}
+.menu-active-option-button{
+    display: flex;
+    flex-direction: row;
+}
+.menu-active-option-button button{
+    width:100px;
+    margin:10px;
+}
+
+.user-menu {
+    width:400px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-menu h2 {
+    margin-bottom: 10px;
+}
+
+.user-menu button {
+    margin-top: 10px;
+}
+
+.user-menu input,
+.user-menu textarea {
+    width: calc(100% - 20px);
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.highlighted {
+    background-color: yellow;
+}
+
+.user-menu h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.comment-section {
+    border:1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.comment-view-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-section .user-names,
+.comment-section .user-comments {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.comment-section .user-names {
+    flex: 1;
+    height: 150px;
+}
+
+.comment-section .user-comments {
+    flex: 2;
+    height: 150px;
+}
